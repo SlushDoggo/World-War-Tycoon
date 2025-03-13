@@ -1,0 +1,78 @@
+/* Metal Military Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #2e2e2e; /* Dark gray */
+    color: #e0e0e0; /* Light gray for contrast */
+}
+
+button {
+    background-color: #4c4c4c; /* Steel gray */
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid #333;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #777; /* Lighter gray */
+    transition: background-color 0.3s;
+}
+
+h1, h3 {
+    color: #c0c0c0;
+    font-family: 'Verdana', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f1c232; /* Military yellow */
+}
+
+.shop, .upgrades, .diplomacy, .resources {
+    margin-top: 20px;
+    padding: 15px;
+    background: #444; /* Darker gray */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.map-container {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#worldMap {
+    width: 100%;
+    max-width: 700px;
+    border: 3px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 0, 0.5); /* Yellow glow on focus */
+}
+
+/* Diplomacy status */
+#diplomacyStatus {
+    font-weight: bold;
+    color: #f1c232;
+}
+
+.resources {
+    border: 2px solid #444;
+    background-color: #333;
+}
+
+.shop, .upgrades {
+    border: 2px solid #333;
+    background-color: #333;
+}

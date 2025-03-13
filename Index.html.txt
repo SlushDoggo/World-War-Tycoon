@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World War Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>World War Tycoon</h1>
+    <button onclick="startGame()">Start Game</button>
+    <p id="gameStatus">Click Start to begin!</p>
+
+    <h2 id="money">Money: $1000</h2>
+    <h3>Income: <span id="income">$10/sec</span></h3>
+
+    <div class="resources">
+        <h3>Resources</h3>
+        <p>Oil: <span id="oil">0</span> barrels</p>
+        <p>Factories: <span id="factories">0</span></p>
+        <p>Energy: <span id="energy">100</span>%</p>
+    </div>
+
+    <div class="shop">
+        <h3>Military Units</h3>
+        <button onclick="buyUnit('army')">Buy Soldier ($100, 1 Energy)</button>
+        <button onclick="buyUnit('navy')">Buy Ship ($500, 5 Energy)</button>
+        <button onclick="buyUnit('airForce')">Buy Jet ($1000, 10 Energy)</button>
+    </div>
+
+    <div class="upgrades">
+        <h3>Upgrades</h3>
+        <button onclick="buyUpgrade('factory')">Build Factory (+$5/sec) - $500</button>
+        <button onclick="buyUpgrade('oilRefinery')">Build Oil Refinery (Generates Oil) - $1000</button>
+        <button onclick="buyUpgrade('powerPlant')">Build Power Plant (Restores Energy) - $1500</button>
+    </div>
+
+    <div class="diplomacy">
+        <h3>Diplomacy</h3>
+        <button onclick="formAlliance()">Form Alliance</button>
+        <button onclick="declareWar()">Declare War</button>
+        <button onclick="betrayAlliance()">Betray Alliance</button>
+        <button onclick="demandResources()">Demand Resources</button>
+        <p id="diplomacyStatus">Status: Neutral</p>
+    </div>
+
+    <h3>Territory Expansion</h3>
+    <p id="territoryStatus">Controlled Territories: 0</p>
+
+    <h3>World Map</h3>
+    <div class="map-container">
+        <img src="world-map.jpg" id="worldMap" usemap="#worldMapArea" alt="World Map">
+        <map name="worldMapArea">
+            <!-- Updated regions with more territories -->
+            <area shape="rect" coords="50,50,150,150" alt="North America" onclick="attackEnemy('North America')">
+            <area shape="rect" coords="200,100,300,200" alt="Europe" onclick="attackEnemy('Europe')">
+            <area shape="rect" coords="350,250,450,350" alt="Asia" onclick="attackEnemy('Asia')">
+            <area shape="rect" coords="500,100,600,200" alt="Africa" onclick="attackEnemy('Africa')">
+            <area shape="rect" coords="150,300,250,400" alt="South America" onclick="attackEnemy('South America')">
+            <area shape="rect" coords="600,250,700,350" alt="Oceania" onclick="attackEnemy('Oceania')">
+        </map>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
